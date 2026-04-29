@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hernandez - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="sticker sticker-1">✨</div>
+    <div class="sticker sticker-2">💐</div>
+
+    <div class="container">
+        <header>
+            <img src="img/Hernandez logo2 color.svg" alt="Enchante - Enjoy the Butterflys" style="max-width: 250px; height: auto;">
+        </header>
+
+        <div class="nav-grid">
+            <!-- About Card -->
+            <div class="nav-card">
+                <a href="about.html">
+                    <h2 class="card-title">About!</h2>
+                    <p class="card-description">Learn more about me, my story, and my hobbies</p>
+                </a>
+            </div>
+
+            <!-- Projects Card -->
+            <div class="nav-card">
+                <a href="Projects.html">
+                    <h2 class="card-title">Projects!</h2>
+                    <p class="card-description">Check out the projects I've worked on and created</p>
+                </a>
+            </div>
+
+            <!-- Blog Card -->
+            <div class="nav-card">
+                <a href="blog.html">
+                    <h2 class="card-title">Blog!</h2>
+                    <p class="card-description">Read whats going on in my life</p>
+                </a>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="nav-card">
+                <a href="contact.html">
+                    <h2 class="card-title">Contact Me!</h2>
+                    <p class="card-description">Get in touch! I'd love to hear from you</p>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="lyric-text" id="lyricDisplay"></div>
+            <div class="song-attribution" id="songDisplay"></div>
+        </footer>
+    </div>
+
+    <script>
+        
+        const lyrics = [
+                        {
+                text: "My name's Blurryface and I care what you think",
+                song: "Stressed Out - Twenty One Pilots"
+            },
+            {
+                text: "My days lie dormant 'cause i just cant aford it ",
+                song: "Days Lie Dormant - Twenty One Pilots"
+            },
+            {
+                text: "Not dun not dun Josh dun",
+                song: "Morph - Twenty One Pilots"
+            },
+            {
+                text: "I ponder of something great, my lungs will fill and then deflate",
+                song: "Car Radio - Twenty One Pilots"
+            },
+            {
+                text: "im trying im trying to sleep but i cant but i cant when you all have guns for hands yeah",
+                song: "Guns for hands - Twenty One Pilots"
+            },
+            {
+                text: "got that penny loafers squeek, across linoleum big flex complex napoleon",
+                song: "Lavish - Twenty One Pilots"
+            },
+            {
+                text: "whats your eta? Two minutes! Chill out man were right on time",
+                song: "Midwest Indigo - Twenty One Pilots"
+            },
+            {
+                text: "Can't change what you've done, start fresh next semester",
+                song: "Next Semester - Twenty One Pilots"
+            },
+            {
+                text: "When darkness comes on though, push on through",
+                song: "Oldies Station - Twenty One Pilots"
+            },
+            {
+                text: "Should they keep it on display Or redecorate?",
+                song: "Redecorate - Twenty One Pilots"
+            },
+            {
+                text: "Raw fear moves me, sounds of empty Uzis Life is just forever nipping heels, never slowing down",
+                song: "Rawfear - Twenty One Pilots"
+            },
+            {
+                text: "Found out what I'm worth, I run to you I hope you understand this run-on sentence. My tattoos only hurt when meaning fades, I think my skin got worse with good intentions",
+                song: "Center Mass - Twenty One Pilots"
+            },
+            {
+                text: "Would you move closer if I grew quieter? Maybe this is you Maybe you don't fix and you like it like this",
+                song: "Garbage - Twenty One Pilots"
+            },
+            {
+                text: "I think you would beat the moon in a pretty contest And the moon just happened to be the very first thing that I missed",
+                song: "Air Catcher - Twenty One Pilots"
+            },
+            {
+                text: "I have seemed to run out of excuses of why I am this way",
+                song: "Snap Back - Twenty One Pilots"
+            },
+            {
+                text: "In time, I will leave the city For now, I will stay alive",
+                song: "Leave The City - Twenty One Pilots"
+            },
+            {
+                text: "You want a tally, I lost the count You want to love me, I'll let you down Still now, you believe in me somehow",
+                song: "Tally - Twenty One Pilots"
+            },
+
+        ];
+
+        // Function to get random lyric
+        function displayRandomLyric() {
+            const randomIndex = Math.floor(Math.random() * lyrics.length);
+            const selectedLyric = lyrics[randomIndex];
+            
+            document.getElementById('lyricDisplay').textContent = `"${selectedLyric.text}"`;
+            document.getElementById('songDisplay').textContent = `— ${selectedLyric.song}`;
+        }
+
+        // Display random lyric when page loads
+        window.addEventListener('load', displayRandomLyric);
+    </script>
+</body>
+</html>

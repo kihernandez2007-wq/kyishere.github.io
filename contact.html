@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hernandez - About Me</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" style="display: inline-block; margin-bottom: 20px; background: #FCA3CB; border: 3px solid #FF7FB8; border-radius: 15px; padding: 8px 16px; text-decoration: none; color: #3D3837; font-weight: bold; font-size: 0.9rem; cursor: pointer; position: relative; transform: rotate(-1deg); transition: all 0.3s ease; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);" 
+              onmouseover="this.style.transform='scale(1.08) rotate(0deg)'; this.style.boxShadow='12px 12px 30px rgba(0, 0, 0, 0.2)';" 
+              onmouseout="this.style.transform='rotate(-1deg)'; this.style.boxShadow='8px 8px 20px rgba(0, 0, 0, 0.1)';">
+            ← Back
+        </a>
+        <style>
+            a[href="index.html"]::before {
+                content: '';
+                position: absolute;
+                top: -12px;
+                left: 30%;
+                width: 40%;
+                height: 8px;
+                background: #b74ca3;
+                border: 1px solid #850755;
+                border-radius: 3px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                transform: rotate(-5deg);
+            }
+            
+            /* Contact Page Layout */
+            .contact-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                margin-top: 40px;
+            }
+            
+            .contact-form-section {
+                background: #FF7FB8;
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);
+                transform: rotate(-1deg);
+                height: fit-content;
+            }
+            
+            .contact-form-section:hover {
+                transform: scale(1.02) rotate(0deg);
+                box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.2);
+            }
+            
+            .contact-form-section h2 {
+                color: #3D3837;
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                font-family: 'Impact', sans-serif;
+            }
+            
+            .form-group {
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .form-group label {
+                color: #3D3837;
+                font-weight: bold;
+                margin-bottom: 8px;
+                font-size: 1rem;
+            }
+            
+            .form-group input,
+            .form-group textarea {
+                padding: 12px;
+                border: 1px solid #3D3837;
+                border-radius: 8px;
+                font-family: inherit;
+                font-size: 1rem;
+                color: #3D3837;
+                background: #25C5D8;
+                transition: all 0.3s ease;
+            }
+            
+            .form-group input:focus,
+            .form-group textarea:focus {
+                outline: none;
+                background: white;
+                border-color: #FCA3CB;
+                box-shadow: 0 0 8px rgba(252, 163, 203, 0.3);
+            }
+            
+            .form-group textarea {
+                resize: vertical;
+                min-height: 120px;
+            }
+            
+            .submit-btn {
+                background: #FCA3CB;
+                border: 3px solid #FF7FB8;
+                border-radius: 10px;
+                padding: 12px 24px;
+                color: #3D3837;
+                font-weight: bold;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                transform: rotate(-1deg);
+            }
+            
+            .submit-btn:hover {
+                transform: scale(1.08) rotate(0deg);
+                box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .social-embeds-section {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                overflow-y: auto;
+                max-height: 900px;
+                padding-right: 10px;
+            }
+            
+            .social-embeds-section h2 {
+                color: #d4513a;
+                font-size: 1.5rem;
+                font-family: 'Impact', sans-serif;
+                margin-bottom: 10px;
+            }
+            
+            @media (max-width: 1024px) {
+                .contact-wrapper {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+                
+                .social-embeds-section {
+                    max-height: none;
+                }
+            }
+        </style>
+
+<!-- Two Column Layout: Contact Form & Social Embeds -->
+<div class="contact-wrapper">
+    <!-- Left Column: Contact Form -->
+    <div class="contact-form-section">
+        <h2>Get In Touch!</h2>
+        <form action="mailto:kyisheree@gmail.com" method="POST" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+    
+    <!-- Right Column: Social Embeds -->
+    <div class="social-embeds-section">
+        <h2>Follow Me!</h2>
+        
+        <!--insta embed-->
+        <div>
+            <behold-widget feed-id="qmFPyAY6NV8NfKauFBq2"></behold-widget>
+            <script>
+              (() => {
+                const d=document,s=d.createElement("script");s.type="module";
+                s.src="https://w.behold.so/widget.js";d.head.append(s);
+              })();
+            </script>
+        </div>
+        
+        <!--x embed-->
+        <div>
+            <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/kyis_heree?ref_src=twsrc%5Etfw">Tweets by kyis_heree</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" align="center"><p lang="en" dir="ltr">me when i just noticed that i never made a bio<br>anyways!<br>Hi im ky and im a huge fan of twenty one pilots Im also really big into film, television and theatre. Ive been to alot of concerts like Top, Electric Callboy, Crane Wives and more! honesty imma shit post sooo yeah!:3 <a href="https://t.co/VIAe8r2vNm">pic.twitter.com/VIAe8r2vNm</a></p>&mdash; ky! (@kyis_heree) <a href="https://twitter.com/kyis_heree/status/2042264848000565597?ref_src=twsrc%5Etfw">April 9, 2026</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--tik tok embed-->
+        <div>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kys.studio_" data-unique-id="kys.studio_" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@kys.studio_?refer=creator_embed">@kys.studio_</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+        
+        <!--Bluesky embed-->
+        <div>
+            <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:t6kx3xhfnsx6ovwtw6i6we7e/app.bsky.feed.post/3miyobiajy22e" data-bluesky-cid="bafyreibtavyh7fsjxxyyorodafgcps2mppv7dedt4gsa3sqy747r4apzp4" data-bluesky-embed-color-mode="system"><p lang="en">me when i just noticed that i never made a bio... anyways!
+Hi im ky and im a huge fan of twenty one pilots (could you tell) Im also really big into film, television and theatre. Ive been to alot of concerts like Top, Electric Callboy, The Crane Wives and more! Tbh imma shit post on here sooo yeah!:3<br><br><a href="https://bsky.app/profile/did:plc:t6kx3xhfnsx6ovwtw6i6we7e/post/3miyobiajy22e?ref_src=embed">[image or embed]</a></p>&mdash; ky! (<a href="https://bsky.app/profile/did:plc:t6kx3xhfnsx6ovwtw6i6we7e?ref_src=embed">@kyisheree.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:t6kx3xhfnsx6ovwtw6i6we7e/post/3miyobiajy22e?ref_src=embed">Apr 8, 2026 at 12:04 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+        </div>
+    </div>
+</div>
+
+
+      <footer>
+            <div class="lyric-text" id="lyricDisplay"></div>
+            <div class="song-attribution" id="songDisplay"></div>
+        </footer>
+    </div>
+
+    <script>
+        
+        const lyrics = [
+                        {
+                text: "My name's Blurryface and I care what you think",
+                song: "Stressed Out - Twenty One Pilots"
+            },
+            {
+                text: "My days lie dormant 'cause i just cant aford it ",
+                song: "Days Lie Dormant - Twenty One Pilots"
+            },
+            {
+                text: "Not dun not dun Josh dun",
+                song: "Morph - Twenty One Pilots"
+            },
+            {
+                text: "I ponder of something great, my lungs will fill and then deflate",
+                song: "Car Radio - Twenty One Pilots"
+            },
+            {
+                text: "im trying im trying to sleep but i cant but i cant when you all have guns for hands yeah",
+                song: "Guns for hands - Twenty One Pilots"
+            },
+            {
+                text: "got that penny loafers squeek, across linoleum big flex complex napoleon",
+                song: "Lavish - Twenty One Pilots"
+            },
+            {
+                text: "whats your eta? Two minutes! Chill out man were right on time",
+                song: "Midwest Indigo - Twenty One Pilots"
+            },
+            {
+                text: "Can't change what you've done, start fresh next semester",
+                song: "Next Semester - Twenty One Pilots"
+            },
+            {
+                text: "When darkness comes on though, push on through",
+                song: "Oldies Station - Twenty One Pilots"
+            },
+            {
+                text: "Should they keep it on display Or redecorate?",
+                song: "Redecorate - Twenty One Pilots"
+            },
+            {
+                text: "Raw fear moves me, sounds of empty Uzis Life is just forever nipping heels, never slowing down",
+                song: "Rawfear - Twenty One Pilots"
+            },
+            {
+                text: "Found out what I'm worth, I run to you I hope you understand this run-on sentence. My tattoos only hurt when meaning fades, I think my skin got worse with good intentions",
+                song: "Center Mass - Twenty One Pilots"
+            },
+            {
+                text: "Would you move closer if I grew quieter? Maybe this is you Maybe you don't fix and you like it like this",
+                song: "Garbage - Twenty One Pilots"
+            },
+            {
+                text: "I think you would beat the moon in a pretty contest And the moon just happened to be the very first thing that I missed",
+                song: "Air Catcher - Twenty One Pilots"
+            },
+            {
+                text: "I have seemed to run out of excuses of why I am this way",
+                song: "Snap Back - Twenty One Pilots"
+            },
+            {
+                text: "In time, I will leave the city For now, I will stay alive",
+                song: "Leave The City - Twenty One Pilots"
+            },
+            {
+                text: "You want a tally, I lost the count You want to love me, I'll let you down Still now, you believe in me somehow",
+                song: "Tally - Twenty One Pilots"
+            },
+
+        ];
+
+        // Function to get random lyric
+        function displayRandomLyric() {
+            const randomIndex = Math.floor(Math.random() * lyrics.length);
+            const selectedLyric = lyrics[randomIndex];
+            
+            document.getElementById('lyricDisplay').textContent = `"${selectedLyric.text}"`;
+            document.getElementById('songDisplay').textContent = `— ${selectedLyric.song}`;
+        }
+
+        // Display random lyric when page loads
+        window.addEventListener('load', displayRandomLyric);
+    </script>

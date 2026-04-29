@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hernandez - About Me</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <!-- Stickers -->
+    <div class="sticker sticker-1">🍧</div>
+    <div class="sticker sticker-2">🎨</div>
+
+    <div class="container">
+        <a href="index.html" style="display: inline-block; margin-bottom: 20px; background: #FCA3CB; border: 3px solid #FF7FB8; border-radius: 15px; padding: 8px 16px; text-decoration: none; color: #3D3837; font-weight: bold; font-size: 0.9rem; cursor: pointer; position: relative; transform: rotate(-1deg); transition: all 0.3s ease; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);" 
+              onmouseover="this.style.transform='scale(1.08) rotate(0deg)'; this.style.boxShadow='12px 12px 30px rgba(0, 0, 0, 0.2)';" 
+              onmouseout="this.style.transform='rotate(-1deg)'; this.style.boxShadow='8px 8px 20px rgba(0, 0, 0, 0.1)';">
+            ← Back
+        </a>
+        <style>
+            a[href="index.html"]::before {
+                content: '';
+                position: absolute;
+                top: -12px;
+                left: 30%;
+                width: 40%;
+                height: 8px;
+                background: #b74ca3;
+                border: 1px solid #850755;
+                border-radius: 3px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                transform: rotate(-5deg);
+            }
+        </style>
+
+        <header>
+            <h1>About Me!</h1>
+        </header>
+        <!--about me text-->
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <img src="img/About me photos/IMG_8786.jpg" alt="photo of me" style="width:200px;height:auto; flex-shrink: 0;">
+            <p>My name is kylah and I am a television student. Currently I am a freshman at Mercer County Comunity Collage, 
+                Personaly I see myself working somewhere in the sports field doing some type of telavison production.  
+                I absolutely love the tech side of things like film, telavision, and theather.  Curently I still work at my 
+                old school district as their tech for events that happen in the audatoriums.  Along with that I work at a film
+                company doing dance recitals and other events.</p>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 20px; flex-direction: row-reverse;">
+            <img src="img/About me photos/IMG_8471.jpg" alt="My Photo" style="width:200px;height:auto; flex-shrink: 0;">
+            <p> I have alot of hobbies, most of them are very expensive hobby like arcade rhythm games, Colecting physical media, attending concerts and motersport events.  
+                Along with thoes I also love doing film and photography.  I also love listning to music its one of the things I do to pass time.  Some of my favorite artist are
+                Twenty Øne Piløts, Crane Wives, Eletric Callboy, Joost, Balu Brigada and others. Some of the arcade rhythm games I play are MaiMai, Project Diva, Taiko no Tatsujin, 
+                Sound Voltex, DDR and others</p>
+        </div>
+
+        <!--hobby photos-->
+        <div class="photo-grid">
+            <img src="img/About me photos/IMG_8326.jpg" alt="Photo 1">
+            <img src="img/About me photos/IMG_1987.jpg" alt="Photo 2">
+            <img src="img/About me photos/IMG_2002.jpg" alt="Photo 3">
+            <img src="img/About me photos/IMG_2033.JPG" alt="Photo 4">
+            <img src="img/About me photos/IMG_2937.jpg" alt="Photo 5">
+            <img src="img/About me photos/IMG_1573.JPG" alt="Photo 6">
+            <img src="img/About me photos/IMG_8147.JPG" alt="Photo 7">
+            <img src="img/About me photos/IMG_3721.JPG" alt="Photo 8">
+            <img src="img/About me photos/IMG_2475.JPG" alt="Photo 9">
+            <img src="img/About me photos/IMG_6467.JPG" alt="Photo 10">
+            <img src="img/About me photos/IMG_0925.jpg" alt="Photo 11">
+            <img src="img/About me photos/IMG_0078.jpg" alt="Photo 12">
+        </div>
+        
+ </body>
+</html>
+<!--lyrics footer-->
+  <footer>
+            <div class="lyric-text" id="lyricDisplay"></div>
+            <div class="song-attribution" id="songDisplay"></div>
+        </footer>
+
+
+    <script>
+        
+        const lyrics = [
+                        {
+                text: "My name's Blurryface and I care what you think",
+                song: "Stressed Out - Twenty One Pilots"
+            },
+            {
+                text: "My days lie dormant 'cause i just cant aford it ",
+                song: "Days Lie Dormant - Twenty One Pilots"
+            },
+            {
+                text: "Not dun not dun Josh dun",
+                song: "Morph - Twenty One Pilots"
+            },
+            {
+                text: "I ponder of something great, my lungs will fill and then deflate",
+                song: "Car Radio - Twenty One Pilots"
+            },
+            {
+                text: "im trying im trying to sleep but i cant but i cant when you all have guns for hands yeah",
+                song: "Guns for hands - Twenty One Pilots"
+            },
+            {
+                text: "got that penny loafers squeek, across linoleum big flex complex napoleon",
+                song: "Lavish - Twenty One Pilots"
+            },
+            {
+                text: "whats your eta? Two minutes! Chill out man were right on time",
+                song: "Midwest Indigo - Twenty One Pilots"
+            },
+            {
+                text: "Can't change what you've done, start fresh next semester",
+                song: "Next Semester - Twenty One Pilots"
+            },
+            {
+                text: "When darkness comes on though, push on through",
+                song: "Oldies Station - Twenty One Pilots"
+            },
+            {
+                text: "Should they keep it on display Or redecorate?",
+                song: "Redecorate - Twenty One Pilots"
+            },
+            {
+                text: "Raw fear moves me, sounds of empty Uzis Life is just forever nipping heels, never slowing down",
+                song: "Rawfear - Twenty One Pilots"
+            },
+            {
+                text: "Found out what I'm worth, I run to you I hope you understand this run-on sentence. My tattoos only hurt when meaning fades, I think my skin got worse with good intentions",
+                song: "Center Mass - Twenty One Pilots"
+            },
+            {
+                text: "Would you move closer if I grew quieter? Maybe this is you Maybe you don't fix and you like it like this",
+                song: "Garbage - Twenty One Pilots"
+            },
+            {
+                text: "I think you would beat the moon in a pretty contest And the moon just happened to be the very first thing that I missed",
+                song: "Air Catcher - Twenty One Pilots"
+            },
+            {
+                text: "I have seemed to run out of excuses of why I am this way",
+                song: "Snap Back - Twenty One Pilots"
+            },
+            {
+                text: "In time, I will leave the city For now, I will stay alive",
+                song: "Leave The City - Twenty One Pilots"
+            },
+            {
+                text: "You want a tally, I lost the count You want to love me, I'll let you down Still now, you believe in me somehow",
+                song: "Tally - Twenty One Pilots"
+            },
+
+        ];
+
+        // Function to get random lyric
+        function displayRandomLyric() {
+            const randomIndex = Math.floor(Math.random() * lyrics.length);
+            const selectedLyric = lyrics[randomIndex];
+            
+            document.getElementById('lyricDisplay').textContent = `"${selectedLyric.text}"`;
+            document.getElementById('songDisplay').textContent = `— ${selectedLyric.song}`;
+        }
+
+        // Display random lyric when page loads
+        window.addEventListener('load', displayRandomLyric);
+    </script>
+
+</body>
+</html>

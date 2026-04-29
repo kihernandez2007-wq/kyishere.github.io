@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hernandez - Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+     <!-- Stickers -->
+    <div class="sticker sticker-1">🎤</div>
+    <div class="sticker sticker-2">🎥</div>
+    <!--Back Button-->
+    <div class="container">
+        <a href="index.html" style="display: inline-block; margin-bottom: 20px; background: #FCA3CB; border: 3px solid #FF7FB8; border-radius: 15px; padding: 8px 16px; text-decoration: none; color: #3D3837; font-weight: bold; font-size: 0.9rem; cursor: pointer; position: relative; transform: rotate(-1deg); transition: all 0.3s ease; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);" 
+              onmouseover="this.style.transform='scale(1.08) rotate(0deg)'; this.style.boxShadow='12px 12px 30px rgba(0, 0, 0, 0.2)';" 
+              onmouseout="this.style.transform='rotate(-1deg)'; this.style.boxShadow='8px 8px 20px rgba(0, 0, 0, 0.1)';">
+            ← Back
+        </a>
+        <style>
+            a[href="index.html"]::before {
+                content: '';
+                position: absolute;
+                top: -12px;
+                left: 30%;
+                width: 40%;
+                height: 8px;
+                background: #b74ca3;
+                border: 1px solid #850755;
+                border-radius: 3px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                transform: rotate(-5deg);
+            }
+        </style>
+    </div>
+<style>
+    * { box-sizing: border-box; }
+    body { font-family: Verdana, sans-serif; margin: 0; }
+    .projects-wrapper { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    .projects-title { text-align: center; margin-bottom: 24px; }
+    .projects-title h1 { margin: 0; font-size: 2.6rem; }
+    .slides-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .slideshow-box { flex: 1 1 320px; max-width: 360px; }
+    .slideshow-container { width: 100%; position: relative; margin: auto; }
+    .mySlides { display: none; }
+    .mySlides img { vertical-align: middle; width: 100%; border-radius: 10px; }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 12px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.3s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .next { right: 0; border-radius: 3px 0 0 3px; }
+    .prev:hover, .next:hover { background-color: rgba(0,0,0,0.75); }
+    .text {
+        color: #333;
+        font-size: 14px;
+        padding: 12px 8px 0;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 8px;
+        text-shadow: none;
+    }
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    .dots { text-align: center; margin-top: 12px; }
+    .dot {
+        cursor: pointer;
+        height: 14px;
+        width: 14px;
+        margin: 0 4px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+    .active, .dot:hover { background-color: #717171; }
+    .fade { animation-name: fade; animation-duration: 1.5s; }
+    @keyframes fade { from { opacity: .4; } to { opacity: 1; } }
+    @media (max-width: 1000px) {
+        .slideshow-box { max-width: 45%; }
+    }
+    @media (max-width: 700px) {
+        .slides-grid { flex-direction: column; align-items: center; }
+        .slideshow-box { max-width: 100%; }
+    }
+    
+    /* Video Projects Styling */
+    .video-projects-grid {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    
+    .video-project {
+        flex: 1 1 300px;
+        max-width: 450px;
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        transform: rotate(-1deg);
+    }
+    
+    .video-project:nth-child(2) {
+        transform: rotate(1deg);
+    }
+    
+    .video-project:hover {
+        transform: scale(1.05) rotate(0deg);
+        box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .video-project h3 {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        color: #d4513a;
+        font-size: 1.3rem;
+    }
+    
+    .video-project p {
+        color: #3D3837;
+        line-height: 1.5;
+    }
+    
+    /* Inspiration Section */
+    .inspiration-section {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+    }
+    
+    .inspiration-section > p {
+        text-align: center;
+        color: #3D3837;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+    
+    .inspiration-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .inspiration-item {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid #FF7FB8;
+        transition: all 0.3s ease;
+    }
+    
+    .inspiration-item:hover {
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+    }
+    
+    .inspiration-item h3 {
+        color: #d4513a;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .inspiration-item p {
+        color: #3D3837;
+        line-height: 1.5;
+        font-size: 0.95rem;
+    }
+    
+    @media (max-width: 700px) {
+        .slides-grid { flex-direction: column; align-items: center; }
+        .slideshow-box { max-width: 100%; }
+        .video-projects-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+        .video-project {
+            max-width: 100%;
+        }
+        .inspiration-content {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="projects-wrapper">
+    <div class="projects-title">
+        <h1>Projects!</h1>
+    </div>
+<!--Project photos-->
+    <div class="slides-grid">
+        <div class="slideshow-box">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/top poster/Breach 2.jpg" alt="Breach project">
+                    <div class="text">Breach Poster</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/top poster/Trench.jpg" alt="Trench project">
+                    <div class="text">Trench Poster</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img/top poster/clancy 2.jpg" alt="Clancy project">
+                    <div class="text">Clancy Poster</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img/top poster/sai.jpg" alt="Live project">
+                    <div class="text">Scaled and Icy Poster</div>
+                </div>
+                <a class="prev" onclick="plusSlides(this, -1)">❮</a>
+                <a class="next" onclick="plusSlides(this, 1)">❯</a>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                <span class="dot" onclick="currentSlide(this, 3)"></span>
+                <span class="dot" onclick="currentSlide(this, 4)"></span>
+            </div>
+        </div>
+
+    
+        <div class="slideshow-box">
+          
+      <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/Band photos/20251012-IMG_0443.jpg" alt="Live project">
+                    <div class="text">Band Comp</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/Band photos/20251012-IMG_8936.jpg" alt="BTS project">
+                    <div class="text">Band Comp</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img/Band photos/20251012-IMG_9595.jpg" alt="Final project">
+                    <div class="text">Band Comp</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img/Band photos/20251012-IMG_0509.jpg" alt="Live project">
+                    <div class="text">Band Comp</div>
+                </div>
+                <a class="prev" onclick="plusSlides(this, -1)">❮</a>
+                <a class="next" onclick="plusSlides(this, 1)">❯</a>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                <span class="dot" onclick="currentSlide(this, 3)"></span>
+                <span class="dot" onclick="currentSlide(this, 4)"></span>
+            </div>
+        </div>
+
+        <div class="slideshow-box">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/Grid life/IMG_5523.JPG" alt="Studio project">
+                    <div class="text">GridLife At Lime Rock Park</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/Grid life/IMG_5766.JPG" alt="Performance project">
+                    <div class="text">GridLife At Lime Rock Park</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img/Grid life/IMG_5486.JPG" alt="Creative project">
+                    <div class="text">GridLife At Lime Rock Park</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img/Grid life/IMG_5029.JPG" alt="Live project">
+                    <div class="text">GridLife At Lime Rock Park</div>
+                </div>
+                <a class="prev" onclick="plusSlides(this, -1)">❮</a>
+                <a class="next" onclick="plusSlides(this, 1)">❯</a>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                <span class="dot" onclick="currentSlide(this, 3)"></span>
+                <span class="dot" onclick="currentSlide(this, 4)"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Video Projects Section -->
+<div class="projects-wrapper">
+    <div class="projects-title">
+        <h2>Video Projects</h2>
+    </div>
+    <div class="video-projects-grid">
+        <div class="video-project">
+            <video width="100%" height="auto" controls style="border-radius: 10px;">
+                <source src="videos/Hernandez Kill bill mv.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Kill Bill MV</h3>
+            <p>This is my Mv of Kill Bill from SZA.  It was really fun working on this project!</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+<!--button script-->
+<script>
+    function plusSlides(button, n) {
+        const box = button.closest('.slideshow-box');
+        const current = Number(box.dataset.slideIndex || 1);
+        showSlides(box, current + n);
+    }
+
+    function currentSlide(dot, n) {
+        const box = dot.closest('.slideshow-box');
+        showSlides(box, n);
+    }
+
+    function showSlides(box, n) {
+        const slides = box.querySelectorAll('.mySlides');
+        const dots = box.querySelectorAll('.dot');
+        if (!slides.length) return;
+        if (n > slides.length) { n = 1; }
+        if (n < 1) { n = slides.length; }
+        slides.forEach(slide => slide.style.display = 'none');
+        dots.forEach(dot => dot.className = dot.className.replace(' active', ''));
+        slides[n - 1].style.display = 'block';
+        if (dots[n - 1]) dots[n - 1].className += ' active';
+        box.dataset.slideIndex = n;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.slideshow-box').forEach(box => showSlides(box, 1));
+    });
+</script>
+
+<!--Lyric footer-->
+<footer>
+            <div class="lyric-text" id="lyricDisplay"></div>
+            <div class="song-attribution" id="songDisplay"></div>
+        </footer>
+    </div>
+    <script>
+        
+        const lyrics = [
+                        {
+                text: "My name's Blurryface and I care what you think",
+                song: "Stressed Out - Twenty One Pilots"
+            },
+            {
+                text: "My days lie dormant 'cause i just cant aford it ",
+                song: "Days Lie Dormant - Twenty One Pilots"
+            },
+            {
+                text: "Not dun not dun Josh dun",
+                song: "Morph - Twenty One Pilots"
+            },
+            {
+                text: "I ponder of something great, my lungs will fill and then deflate",
+                song: "Car Radio - Twenty One Pilots"
+            },
+            {
+                text: "im trying im trying to sleep but i cant but i cant when you all have guns for hands yeah",
+                song: "Guns for hands - Twenty One Pilots"
+            },
+            {
+                text: "got that penny loafers squeek, across linoleum big flex complex napoleon",
+                song: "Lavish - Twenty One Pilots"
+            },
+            {
+                text: "whats your eta? Two minutes! Chill out man were right on time",
+                song: "Midwest Indigo - Twenty One Pilots"
+            },
+            {
+                text: "Can't change what you've done, start fresh next semester",
+                song: "Next Semester - Twenty One Pilots"
+            },
+            {
+                text: "When darkness comes on though, push on through",
+                song: "Oldies Station - Twenty One Pilots"
+            },
+            {
+                text: "Should they keep it on display Or redecorate?",
+                song: "Redecorate - Twenty One Pilots"
+            },
+            {
+                text: "Raw fear moves me, sounds of empty Uzis Life is just forever nipping heels, never slowing down",
+                song: "Rawfear - Twenty One Pilots"
+            },
+            {
+                text: "Found out what I'm worth, I run to you I hope you understand this run-on sentence. My tattoos only hurt when meaning fades, I think my skin got worse with good intentions",
+                song: "Center Mass - Twenty One Pilots"
+            },
+            {
+                text: "Would you move closer if I grew quieter? Maybe this is you Maybe you don't fix and you like it like this",
+                song: "Garbage - Twenty One Pilots"
+            },
+            {
+                text: "I think you would beat the moon in a pretty contest And the moon just happened to be the very first thing that I missed",
+                song: "Air Catcher - Twenty One Pilots"
+            },
+            {
+                text: "I have seemed to run out of excuses of why I am this way",
+                song: "Snap Back - Twenty One Pilots"
+            },
+            {
+                text: "In time, I will leave the city For now, I will stay alive",
+                song: "Leave The City - Twenty One Pilots"
+            },
+            {
+                text: "You want a tally, I lost the count You want to love me, I'll let you down Still now, you believe in me somehow",
+                song: "Tally - Twenty One Pilots"
+            },
+
+        ];
+
+        // Function to get random lyric
+        function displayRandomLyric() {
+            const randomIndex = Math.floor(Math.random() * lyrics.length);
+            const selectedLyric = lyrics[randomIndex];
+            
+            document.getElementById('lyricDisplay').textContent = `"${selectedLyric.text}"`;
+            document.getElementById('songDisplay').textContent = `— ${selectedLyric.song}`;
+        }
+
+        // Display random lyric when page loads
+        window.addEventListener('load', displayRandomLyric);
+    </script>
+
+</body>
+</html>
